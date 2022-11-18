@@ -1,0 +1,8 @@
+name: python-M2TTD-environment
+channels:
+  - conda-forge
+dependencies:
+  - beautifulsoup4
+  - pip
+  - pip:
+    - googletrans==4.0.0rc1

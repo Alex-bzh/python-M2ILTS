@@ -22,12 +22,12 @@ def main(text):
 
 if __name__ == "__main__":
 
-  # parse arguments
-  parser = argparse.ArgumentParser()
-  parser.add_argument("-t", "--text", type=str, help="text to translate", required=True)
-  args = parser.parse_args()
+	# parse arguments
+	parser = argparse.ArgumentParser()
+	parser.add_argument("-t", "--text", type=str, help="text to translate", required=True)
+	args = parser.parse_args()
 
-  #
-  # program
-  #
-  main(args.text)
+	#
+	# program
+	#
+	main(args.text)

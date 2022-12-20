@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=../1.unix-commands
+DIR=../../1.unix-commands
 
 mkdir ${DIR}
 mkdir ${DIR}/Desktop

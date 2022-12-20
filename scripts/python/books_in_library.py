@@ -5,7 +5,7 @@
 import xml.etree.ElementTree as ET
 
 # which file?
-tree = ET.parse('../data/XML/library.xml')
+tree = ET.parse('../../data/XML/library.xml')
 # get root element
 root = tree.getroot()
 

@@ -33,4 +33,9 @@ for book in tree.iter('book'):
     pub_date = book.find('publication').text
     
     # print result
-    print(f"Author: {firstname} {lastname}\nTitle: {title}\nPublication date: {pub_date}")
+    print(
+        f"Author: {firstname} {lastname}",
+        f"Title: {title}",
+        f"Publication date: {pub_date}",
+        sep="\n"
+    )

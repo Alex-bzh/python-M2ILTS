@@ -1,5 +1,4 @@
 xsltproc
-openjdk-7-jre
 perl
 libxml2
 libxml2-dev

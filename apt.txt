@@ -1,1 +1,8 @@
 xsltproc
+openjdk-7-jre
+perl
+libxml2
+libxml2-dev
+libxml-libxml-perl
+libwww-perl
+liblwp-protocol-https-perl

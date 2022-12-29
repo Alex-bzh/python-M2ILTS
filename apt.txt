@@ -1,4 +1,6 @@
 xsltproc
+default-jre
+default-jdk
 perl
 libxml2
 libxml2-dev

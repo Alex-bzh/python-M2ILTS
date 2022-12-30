@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# intall in lib folder
+mkdir -p ~/lib  && cd ~/lib
+
 # install quarto
 git clone https://github.com/quarto-dev/quarto-cli
 cd quarto-cli

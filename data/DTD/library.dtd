@@ -1,34 +1,45 @@
+<!-- ELEMENTS -->
+
+<!-- root -->
 <!ELEMENT library (books, authors) >
 
+<!-- library children -->
 <!ELEMENT books (book+) >
 <!ELEMENT authors (author+) >
 
+<!-- books children -->
 <!ELEMENT book (title, publication, summary, mark) >
+
+<!-- book children -->
 <!ELEMENT title (#PCDATA) >
 <!ELEMENT publication (#PCDATA) >
 <!ELEMENT summary (#PCDATA) >
 <!ELEMENT mark (#PCDATA) >
 
+<!-- authors children -->
 <!ELEMENT author (lastName, firstName, birth, death) >
+
+<!-- author children -->
 <!ELEMENT lastName (#PCDATA) >
 <!ELEMENT firstName (#PCDATA) >
 <!ELEMENT birth (#PCDATA) >
 <!ELEMENT death (#PCDATA) >
 
+<!-- ATTRIBUTES -->
+
 <!ATTLIST title
-    original_title CDATA #IMPLIED
-    original_lang (fr | en | es) #IMPLIED
->
+	original_title CDATA #IMPLIED
+	original_lang (fr | en | es) #IMPLIED>
+
 <!ATTLIST book
-    ref_author IDREF #REQUIRED
-    xml:lang (fr | es) #REQUIRED
->
+	ref_author IDREF #REQUIRED
+	xml:lang (fr | es) #REQUIRED>
+
 <!ATTLIST author
-    id_author ID #REQUIRED
->
+	id_author ID #REQUIRED>
+
 <!ATTLIST birth
-    place CDATA #REQUIRED
->
+	place CDATA #REQUIRED>
+
 <!ATTLIST death
-    place CDATA #REQUIRED
->
+	place CDATA #REQUIRED>

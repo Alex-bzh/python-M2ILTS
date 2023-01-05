@@ -13,9 +13,6 @@ root = tree.getroot()
 # and parse each one
 for book in tree.iter('book'):
 
-    # a separator between items
-    print('=' * 50)
-
     # ref_author attribute helps find infos about author
     ref_author = book.attrib['ref_author']
 
@@ -37,5 +34,6 @@ for book in tree.iter('book'):
         f"Author: {firstname} {lastname}",
         f"Title: {title}",
         f"Publication date: {pub_date}",
+        "=" * 50,
         sep="\n"
     )

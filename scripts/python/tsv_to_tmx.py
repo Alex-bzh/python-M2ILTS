@@ -24,7 +24,7 @@ def pretty_print(xml, path):
 		xmlfile.write(xmlstr)
 
 # main function
-def main(src, dest):
+def main(filename):
 
 	# <root> element
 	root = ET.Element("tmx")
@@ -44,7 +44,7 @@ def main(src, dest):
 	body = ET.SubElement(root, "body")
 
 	# data is in TSV file
-	with open(f"../../data/CSV/{ src }") as csvfile:
+	with open(filename) as csvfile:
 		# reading data with appropriate module
 		reader = csv.DictReader(csvfile, delimiter="\t")
 
@@ -61,14 +61,13 @@ def main(src, dest):
 				seg.text = segment
 
 	# XML tree into a TMX file
-	pretty_print(root, f"../../data/XML/{ dest }")
+	pretty_print(root, filename.replace('.tsv', '.tmx'))
 
 # program
 if __name__ == "__main__":
 
-	# file names
-	csvfile = "ftb_N+A.tsv"
-	tmxfile = "ftb_N+A.tmx"
+	# filename
+	filename = "../../data/CSV/ftb_N+A.tsv"
 
 	# execute main procedure
-	main(csvfile, tmxfile)
+	main(filename)

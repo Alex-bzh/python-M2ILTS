@@ -13,27 +13,27 @@ root = tree.getroot()
 # and parse each one
 for book in tree.iter('book'):
 
-    # ref_author attribute helps find infos about author
-    ref_author = book.attrib['ref_author']
+  # ref_author attribute helps find infos about author
+  ref_author = book.attrib['ref_author']
 
-    # from root, find every author elements
-    # and parse each one
-    for author in tree.iter('author'):
-        # check if current ref_author is one of id_author
-        if author.attrib['id_author'] == ref_author:
-            # if so, means this author is linked to book element
-            firstname = author.find('firstName').text
-            lastname = author.find('lastName').text
+  # from root, find every author elements
+  # and parse each one
+  for author in tree.iter('author'):
+    # check if current ref_author is one of id_author
+    if author.attrib['id_author'] == ref_author:
+      # if so, means this author is linked to book element
+      firstname = author.find('firstName').text
+      lastname = author.find('lastName').text
 
-    # inner text of title and publication elements
-    title = book.find('title').text
-    pub_date = book.find('publication').text
+  # inner text of title and publication elements
+  title = book.find('title').text
+  pub_date = book.find('publication').text
     
-    # print result
-    print(
-        f"Author: {firstname} {lastname}",
-        f"Title: {title}",
-        f"Publication date: {pub_date}",
-        "=" * 50,
-        sep="\n"
-    )
+  # print result
+  print(
+    f"Author: {firstname} {lastname}",
+    f"Title: {title}",
+    f"Publication date: {pub_date}",
+    "=" * 50,
+    sep="\n"
+  )

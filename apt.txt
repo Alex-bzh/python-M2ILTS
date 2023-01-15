@@ -6,5 +6,4 @@ libxml-libxml-perl
 libwww-perl
 liblwp-protocol-https-perl
 perl
-rsvg-convert
 xsltproc

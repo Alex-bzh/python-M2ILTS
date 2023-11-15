@@ -3,7 +3,9 @@
 # create lib folder
 mkdir -p ~/lib && cd ~/lib
 
-# install saxon-lint
+#
+# saxon-lint
+#
 git clone https://github.com/sputnick-dev/saxon-lint.git
 cd saxon-lint*
 chmod +x saxon-lint.pl

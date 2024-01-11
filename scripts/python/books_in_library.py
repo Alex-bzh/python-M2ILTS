@@ -21,9 +21,9 @@ for book in tree.iter('book'):
     for author in tree.iter('author'):
         # check if current ref_author is one of id_author
         if author.attrib['id_author'] == ref_author:
-        # if so, means this author is linked to book element
-        firstname = author.find('firstName').text
-        lastname = author.find('lastName').text
+            # if so, means this author is linked to book element
+            firstname = author.find('firstName').text
+            lastname = author.find('lastName').text
 
     # inner text of title and publication elements
     title = book.find('title').text
